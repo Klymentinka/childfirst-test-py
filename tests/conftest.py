@@ -26,6 +26,7 @@ def setup(request):
     elif browser_name == "IE":
         print("IE driver")
         driver = webdriver.Ie(IEDriverManager().install())
+    driver.implicitly_wait(10)
     driver.maximize_window()
     request.cls.driver = driver
     yield
