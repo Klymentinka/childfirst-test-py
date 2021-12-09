@@ -11,6 +11,6 @@ class LandingPage():
         self.driver.find_element_by_xpath("//h1[contains(text(),'A co-parenting app solution')]")
 
     def click_signup(self):
-        self.driver.find_element_by_xpath("//header/div[1]/div[2]/a[2]").click()
+        self.driver.find_element_by_link_text('Sign up').click()
         return SignupPage(self.driver)
     
