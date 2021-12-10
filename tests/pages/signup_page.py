@@ -1,9 +1,7 @@
-from selenium.webdriver import Remote as WebDriver
+from .base_page import BasePage
 
 
-class SignupPage():
-    def __init__(self, driver: WebDriver):
-        self.driver = driver
+class SignupPage(BasePage):
         
     def verify(self):
         self.driver.find_element_by_xpath("//h1[contains(text(),'Sign up Kids First')]")

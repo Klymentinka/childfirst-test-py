@@ -3,8 +3,9 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import IEDriverManager
-driver = None
+import os
 
+driver = None
 REPORT_PATH = 'reports'
 
 
@@ -29,5 +30,6 @@ def setup(request):
     driver.implicitly_wait(10)
     driver.maximize_window()
     request.cls.driver = driver
+    request.cls.url = os.getenv('TEST_URL')
     yield
     driver.close()
