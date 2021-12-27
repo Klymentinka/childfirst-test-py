@@ -1,2 +1,2 @@
 # source setenv.sh
-export TEST_URL=http://localhost:3000
+export TEST_URL=https://childfirst.herokuapp.com
