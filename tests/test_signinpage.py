@@ -1,5 +1,4 @@
 from pytest_bdd import parsers, scenarios, given, when, then
-from tests.pages.landing_page import LandingPage
 from tests.pages.signin_page import SigninPage
 from tests.pages.dashboard_page import DashboardPage
 
