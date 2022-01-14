@@ -1,6 +1,9 @@
+from time import time
 from pytest_bdd import parsers, scenarios, given, when, then
 from tests.pages.signup_page import SignupPage
 from tests.pages.myinfo_page import MyinfoPage
+import time
+
 
 scenarios('./features/signup.feature')
 
@@ -19,6 +22,7 @@ def signup_param(browser, email, password, confirm_password):
 def signin_param(browser):
     signup_page = SignupPage(browser)
     signup_page.click_signup()
+    time.sleep(3)
 
 @then('we are on myinfo page')
 def myinfo_verify(browser):

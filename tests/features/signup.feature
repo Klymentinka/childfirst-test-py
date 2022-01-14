@@ -7,6 +7,7 @@ Feature: Signup page
     Then we are on myinfo page
 
     Examples:
-    | email             | password | confirm password |
-    | test@email.com    | 1A4baby$ | 1A4baby$         |
+    | email             | password  | confirm password |
+    | test12@email.com  | 1A4baby$  | 1A4baby$         |
+    | testasd@email.com |123456     |  123456          |
   
